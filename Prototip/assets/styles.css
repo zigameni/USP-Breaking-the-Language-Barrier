@@ -1,0 +1,167 @@
+/*-------------------------------------------------
+GLOBALS CLASSES
+-------------------------------------------------*/
+*{margin:0; padding:0; font-family: 'Ropa Sans', sans-serif;}
+body{background:url(../images/pattern-1.jpg);}
+
+p{font-family: 'Ropa Sans', sans-serif; color:#978e86; font-size:14px; font-weight:normal; line-height:20px;}
+a{text-decoration:none; color:#cf9359;}
+a:hover{text-decoration:none; color:#978e86;}
+ul li { list-style:none; outline:none;}
+img { border:none; }
+img { border:none;}
+h1{font-family: 'Ropa Sans', sans-serif; font-size:26px; color:#282623; text-transform:uppercase; font-weight:normal;}
+/*-------------------------------------------------
+CSS TWEAKS
+-------------------------------------------------*/
+.clearing { clear:both;}
+.fltLeft { float:left;}
+.flrRight { float:right;}
+.marLeft30 { margin-left:30px !important;}
+.marLeft20 { margin-left:20px;}
+.marRight20{ margin-right:20px;}
+.marRight25{ margin-right:25px;}
+.marRight30 { margin-right:30px;}
+.marginTop { margin-top:30px;}
+.marginTop10{ margin-top:10px;}
+.marginBottom { margin-bottom:60px;}
+.padTop { padding-top:20px;}
+.padBottom { padding-bottom:30px;}
+.padBottom20 { padding-bottom:20px;}
+.wid960{ width:960px !important; }
+/*-------------------------------------------------
+GENERAL CLASSES
+-------------------------------------------------*/
+
+.panel {overflow:hidden;}
+.title {}
+.content { overflow:hidden; font-size:14px;}
+.button-link{ }
+.button-link a{font-family: 'Ropa Sans', sans-serif; text-transform:uppercase;}
+.top-border{border-top:1px solid #dadacb; margin:20px 20px 14px 20px;}
+.bottom-border{border-top:1px solid #dadacb; margin:14px;}
+
+/*-------------------------------------------------
+HEADER CLASSES
+-------------------------------------------------*/
+.header{width:960px; margin:0 auto; overflow:hidden;}
+.header-left-panel{width:560px; float:left;}
+.logo-wrap{width:300px; float:left; background:#f3f3ee; overflow:hidden;}
+.logo{width:280px; float:left; margin-left:20px; margin-top:114px;}
+.logo h2{font-family: 'Ropa Sans', sans-serif; font-size:18px; color:#cf9359; text-transform:uppercase; font-weight:normal;}
+.logo h1{color:#50453b; font-size:42px; padding-bottom:22px;}
+.header-right-panel{width:400px; float:right; overflow:hidden; margin-top:30px;}
+.header-right-panel-top{width:280px; float:right;}
+.header-right-panel p{color:#cf9359; float:right; font-size:14px; text-align:right; font-weight:normal;}
+
+.menu{width:400px; float:left; margin-top:40px;}
+.menu ul li{float:left; padding-bottom:20px; width:120px;}
+.menu ul li a{display:block; width:120px; height:40px; line-height:40px; background:#414141; font-family: 'Source Sans Pro', sans-serif; font-size:14px; color:#ffffff; text-align:center; text-transform:uppercase;}
+.menu ul li a:hover{background:#cf9359; color:#282828;}
+.menu ul li a.active{background:#cf9359; color:#282828;}
+
+/*-------------------------------------------------
+PANEL CLASSES
+-------------------------------------------------*/
+.panel-wrap{width:100%; background:url(../images/pattern-2.jpg); overflow:hidden; margin-top:20px;}
+.panel-wrapper{width:960px; margin:0 auto; overflow:hidden; margin-top:60px; padding-bottom:60px;}
+
+.panel-wrapper .panel{width:260px; background:#f3f3ee; float:left; padding:20px;}
+.panel-wrapper .title {  padding-bottom:10px; }
+.panel-wrapper .title h1{color:#50453b; font-family: 'Source Sans Pro', sans-serif; font-weight:normal; padding-top:20px;}
+.panel-wrapper .border{border-bottom:1px solid #dadacb; }
+.panel-wrapper .content p{padding-top:15px; }
+.panel-wrapper .button-link{ margin-top:20px; background:url(../images/icon-more.png) no-repeat; width:16px; height:16px; padding-bottom:30px;  padding-left:20px;}
+
+/*-------------------------------------------------
+TOP PANEL CLASSES
+-------------------------------------------------*/
+.page-wrap{width:100%; background:url(../images/pattern-3.jpg); overflow:hidden;}
+.top-content{width:960px;  background:#f3f3ee; margin:0 auto; margin-top:50px; }
+.top-content h1{padding-top:26px; padding-left:20px;}
+.top-content p{ margin-left:20px; margin-right:20px;}
+.top-content .button-link{margin-left:20px; margin-top:20px; background:url(../images/icon-more.png) no-repeat; width:16px; height:16px; padding-bottom:30px;  padding-left:20px;}
+
+/*-------------------------------------------------
+LAYOUT CLASSES
+-------------------------------------------------*/
+.page-wrapper{width:960px; margin:0 auto; margin-top:30px; padding-bottom:50px; overflow:hidden;}
+.primary-content{width:630px; float:left; overflow:hidden;}
+.sidebar{width:300px; float:left; overflow:hidden;}
+.mid-panel .panel{width:580px;  overflow:hidden; padding-top:30px; padding-left:30px;}
+.panel .title h2{color:#cf9359; font-size:22px; padding-top:20px; font-weight:normal;}
+.content img{float:left;}
+.content p{padding-bottom:10px;}
+/*------------- ------------------------------------
+PRIMARY CONTENT CLASSS
+-------------------------------------------------*/
+.primary-content .toppanel{width:100%; background:url(../images/pattern-2.jpg); overflow:hidden;}
+.primary-content .container{width:590px; margin:0 auto;}
+.primary-content .container h1{padding-top:30px; padding-bottom:15px;}
+.primary-content .container .border-bottom{border-bottom:1px solid #9e978b;}
+.primary-content .container-wrap{width:295px; float:left; overflow:hidden; margin-top:30px; margin-bottom:30px; border-right:1px solid #9e978b;}
+.primary-content .container-wrap.borderNone{border-right:none;}
+.primary-content .container-panel{width:275px; margin-right:20px; border-bottom:1px solid #9e978b; overflow:hidden;}
+.primary-content .container-panel.borderNone{border-bottom:none;}
+.primary-content .container-panel-left{width:42px; float:left;}
+.primary-content .container-panel-right{width:213px; float:left;}
+.primary-content .container-panel-right h3{font-size:18px; color:#ffffff; font-weight:normal;}
+.primary-content .container-panel-right p{color:#e5e2d3;}
+.primary-content .mid-panel{width:100%; background:#f3f3ee; float:left;   padding-bottom:30px;}
+.primary-content .mid-panel-content{width:580px; margin:0 auto; overflow:hidden; padding-top:30px;}
+.primary-content .title {}
+.primary-content .mid-panel-content h2{color:#cf9359; font-size:22px; padding-top:20px; font-weight:normal;}
+.primary-content .mid-panel-content p{padding-top:10px;}
+.primary-content .border{border-bottom:1px solid #dadacb; margin-top:10px;}
+.primary-content .img{width:180px; margin-top:30px; float:left;}
+
+/*-------------------------------------------------
+SIDEBAR CLASSS
+-------------------------------------------------*/
+.search-panel{width:100%; background:#f3f3ee; overflow:hidden;}
+.search-panel .content{width:260px; margin:0 auto; margin-top:30px; padding-bottom:30px; }
+.search-panel .content h2{font-size:14px; color:#cf9359; padding-top:20px; font-weight:normal; padding-bottom:10px;}
+.search-panel .title h1{color:#50453b; font-weight:normal;}
+.search-panel .border{border-bottom:1px solid #dadacb; margin-top:15px;}
+.search-panel .searchbox{width:100%;}
+.search-panel .input{width:200px; height:40px; float:left;  background:#e5e2d3; border:0px; font-size:14px; color:#978e86; padding-left:10px;}
+.search-panel .button a{width:40px; height:40px; float:right; background: url(../images/icon-search.png) no-repeat center #cf9359;}
+
+.midpanel{width:100%; background:#f3f3ee; overflow:hidden; margin-top:30px;}
+.midpanel .content{width:260px; margin:0 auto; margin-top:30px; }
+.midpanel .title h1{color:#50453b; font-weight:normal;}
+.midpanel .border{border-bottom:1px solid #dadacb; margin-top:15px; margin-bottom:10px;}
+.midpanel .content ul li{display:block; border-bottom:1px solid #dadacb; height:39px; line-height:39px;}
+.midpanel .content ul li.borderNone{border-bottom:none;}
+.midpanel .content ul li a{background:url(../images/icon-arrow.png) no-repeat left; padding-left:25px; font-weight:normal; color:#978e86;}
+.midpanel .content ul li a:hover{color:#cf9359;}
+
+.midpanel .container{width:100%; overflow:hidden; border-bottom:1px solid #dadacb; margin-bottom:20px; margin-top:20px;}
+.midpanel .container.borderNone{border-bottom:none;}
+.midpanel .left{width:160px; float:left; margin-right:20px;}
+.midpanel .left h2{font-size:14px; font-weight:normal; color:#cf9359; padding-bottom:14px;}
+.midpanel .left p{padding-bottom:11px;}
+.midpanel .img{float:left; width:80px;}
+
+/*-------------------------------------------------
+CONTACT FORM CLASSS
+-------------------------------------------------*/
+
+.contact-form { padding:30px;float:left; width:550px; overflow:hidden; border-bottom:1px solid #dadacb;}
+.contact-form label {display: block; padding:10px 0 10px 0;}
+.contact-form label span {display: block; color:#939191;font-size:14px; float:left; width:80px; text-align:left; padding:5px 20px 0 0;}
+.contact-form .input_text {padding:10px 10px;width:420px;background:#e5e2d3;border:none; color:#939191;}
+.contact-form .message{padding:10px 10px;width:420px; background:#e5e2d3; border:none;overflow:hidden;height:150px; color:#939191; font-size:14px;}
+.contact-form .button{padding:8px;background:#cf9359; color:#f7f7f7; text-transform:uppercase;font-family: 'Ropa Sans', sans-serif; border:0px solid;margin-left:100px;margin-top:20px;}
+
+.address { padding:30px; float:left; width:520px;}
+.address .panel { border-bottom:none; color:#9b9e9a; background:none; float:left; margin-bottom:30px; padding:0px; width:260px;}
+.address .panel .title h1 {  color:#282623; padding-bottom:10px;}
+.address .panel .content p{border-bottom:none; overflow:hidden; padding-bottom:0px;}
+.address .panel .content p span { color:#9b9e9a;}
+.address .panel .content p a{color:#cf9359; text-decoration:none;}
+.address .panel .content p a:hover{color:#282623;}
+
+
+.footer{width:960px; margin:0 auto; margin-top:76px; overflow:hidden;}
+.footer p{text-align:center; color:#cf9359; padding-bottom:72px;}

@@ -1,0 +1,179 @@
+<!--  
+* @Project Breaking the Language Barrier
+* @author Gazmend Shehu 0664/2016
+*
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link href="assets/styles.css" rel="stylesheet" type="text/css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Ropa+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- ********************* NAVBAR *********************-->
+    <!-- **************************************************-->
+    <nav
+      class="navbar navbar-expand-md navbar-light bg-light"
+      style="background-color: gray;"
+    >
+      <div class="container">
+        <!--  ENTER = HOME -->
+        <a class="navbar-brand" href="index.html">BREAKING</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <!--  TICKETS -->
+            <li class="nav-item ">
+              <a class="nav-link" href="pricing.html">PRICING</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+            <!--  REGISTER -->
+            <!-- REGISTER -->
+            <li class="nav-item ">
+              <a class="nav-link" href="register.html">REGISTER</a>
+            </li>
+
+            <!--  LOGIN -->
+            <li class="nav-item ">
+              <a class="nav-link" href="login.html">SIGN IN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE WRAP -->
+    <div class="page-wrap">
+      <div class="page-wrapper">
+        <div class="primary-content marRight30">
+          <div class="mid-panel">
+            <div class="mid-panel-content">
+              <div class="title">
+                <h1>Register</h1>
+              </div>
+              <div class="border"></div>
+              <form>
+                <div class="contact-form margin-top">
+                  <label>
+                    <span>Username</span>
+                    <input
+                      type="text"
+                      class="input_text"
+                      name="subject"
+                      id="subject"
+                      required
+                    />
+                  </label>
+
+                  <label>
+                    <span>Password</span>
+                    <input
+                      type="password"
+                      class="input_text"
+                      name="subject"
+                      id="subject"
+                      required
+                    />
+                  </label>
+                  <label>
+                    <span>Email</span>
+                    <input
+                      type="text"
+                      class="input_text"
+                      name="email"
+                      id="email"
+                      required
+                    />
+                  </label>
+                  <label>
+                    <span>First Name</span>
+                    <input
+                      type="text"
+                      class="input_text"
+                      name="first-name"
+                      id="name"
+                      required
+                    />
+                  </label>
+                  <label>
+                    <span>Last Name</span>
+                    <input
+                      type="text"
+                      class="input_text"
+                      name="last-name"
+                      id="name"
+                      required
+                    />
+                  </label>
+
+                  <label>
+                    Personal Code
+                    <input
+                      type="text"
+                      class="input_text"
+                      name="subject"
+                      id="subject"
+                      required
+                    />
+                  </label>
+
+                  <span>
+                    <button
+                      type="submit"
+                      class="btn btn-info"
+                      onclick="register()"
+                    >
+                      REGISTER
+                    </button>
+                  </span>
+                </div>
+              </form>
+              <div class="clearing"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--FOOTER-->
+
+    <script>
+      function register() {
+        window.location.replace("dashboard/index.html");
+      }
+    </script>
+  </body>
+</html>

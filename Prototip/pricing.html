@@ -1,0 +1,250 @@
+<!--  
+* @Project Breaking the Language Barrier
+* @author Gazmend Shehu 0664/2016
+*
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Breaking The Language</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <link rel="stylesheet" href="assets/pricing.css" />
+
+    <script>
+      //button stuff buttonStuff
+      function pricingButtonBuy() {
+        // if(localStorage.getItem('logged-in')){
+        window.location.replace("register.html");
+        //}
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ********************* NAVBAR *********************-->
+    <!-- **************************************************-->
+    <nav
+      class="navbar navbar-expand-md navbar-light bg-light"
+      style="background-color: gray;"
+    >
+      <div class="container">
+        <!--  ENTER = HOME -->
+        <a class="navbar-brand" href="index.html">BREAKING</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <!--  TICKETS -->
+            <li class="nav-item ">
+              <a class="nav-link" href="pricing.html">PRICING</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+            <!--  REGISTER -->
+            <!-- REGISTER -->
+            <li class="nav-item ">
+              <a class="nav-link" href="register.html">REGISTER</a>
+            </li>
+
+            <!--  LOGIN -->
+            <li class="nav-item ">
+              <a class="nav-link" href="login.html">SIGN IN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PRICING -->
+    <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+    <section class="pricing py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Free Tier -->
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">
+                  Free
+                </h5>
+                <h6 class="card-price text-center">
+                  $0<span class="period">/month</span>
+                </h6>
+                <hr />
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Single User
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Limited translates
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Community Access
+                  </li>
+                  <li class="text-muted">
+                    <span class="fa-li"><i class="fas fa-times"></i></span
+                    >Unlimited File translates
+                  </li>
+                  <li class="text-muted">
+                    <span class="fa-li"><i class="fas fa-times"></i></span
+                    >Dedicated Phone Support
+                  </li>
+                  <li class="text-muted">
+                    <span class="fa-li"><i class="fas fa-times"></i></span
+                    >Monthly Status Reports
+                  </li>
+                </ul>
+                <button
+                  id="buttonStuff"
+                  class="btn btn-block btn-primary text-uppercase"
+                  onclick="pricingButtonBuy()"
+                >
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Plus Tier -->
+          <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">
+                  Plus
+                </h5>
+                <h6 class="card-price text-center">
+                  $9<span class="period">/month</span>
+                </h6>
+                <hr />
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    ><strong>5 Users</strong>
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>100mb
+                    Storage
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Limited transaltes
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Community Access
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Unlimited file translates
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Dedicated Phone Support
+                  </li>
+                  <li class="text-muted">
+                    <span class="fa-li"><i class="fas fa-times"></i></span
+                    >Monthly Status Reports
+                  </li>
+                </ul>
+                <button
+                  id="buttonStuff"
+                  class="btn btn-block btn-primary text-uppercase"
+                  onclick="pricingButtonBuy()"
+                >
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Pro Tier -->
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">
+                  Pro-corporate
+                </h5>
+                <h6 class="card-price text-center">
+                  $49<span class="period">/month</span>
+                </h6>
+                <hr />
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    ><strong>Unlimited Users</strong>
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span>1GB
+                    Storage
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Unlimited translates
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Community Access
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Unlimited file translates
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Dedicated Phone Support
+                  </li>
+                  <li>
+                    <span class="fa-li"><i class="fas fa-check"></i></span
+                    >Monthly Status Reports
+                  </li>
+                </ul>
+                <button
+                  id="buttonStuff"
+                  class="btn btn-block btn-primary text-uppercase"
+                  onclick="pricingButtonBuy()"
+                >
+                  Buy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+  </body>
+</html>

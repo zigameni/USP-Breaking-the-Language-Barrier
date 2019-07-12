@@ -1,0 +1,465 @@
+<!--  
+* @Project Breaking the Language Barrier
+* @author Gazmend Shehu 0664/2016
+*
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Breaking The Language</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .section-divider {
+        display: inline-block;
+        width: 45%;
+        border-radius: 25px;
+        border: 1px solid gray;
+        padding: 3px 8px;
+        vertical-align: top;
+        height: 400px;
+      }
+
+      .section-divider * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .section-divider h2 {
+        font-size: 2em;
+        border-bottom: 2px outset black;
+        margin-bottom: 15px;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding: 0 10px;
+        text-align: center;
+      }
+
+      .section-divider textarea {
+        width: 90%;
+        height: 250px;
+        resize: none;
+        font-size: 1.5em;
+        padding: 5px 10px;
+      }
+
+      select {
+        height: auto;
+        vertical-align: middle;
+        font-size: inherit;
+      }
+
+      button,
+      input[type="button"] {
+        padding: 0 5px !important;
+      }
+    </style>
+  </head>
+
+  <header>
+    <!-- ********************* NAVBAR *********************-->
+    <!-- **************************************************-->
+    <nav
+      class="navbar navbar-expand-md navbar-light bg-light"
+      style="background-color: gray;"
+    >
+      <div class="container">
+        <!--  ENTER = HOME -->
+        <a class="navbar-brand" href="index.html">BREAKING</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <!--  TICKETS -->
+            <li class="nav-item ">
+              <a class="nav-link" href="pricing.html">PRICING</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+            <!--  REGISTER -->
+            <!-- REGISTER -->
+            <li class="nav-item ">
+              <a class="nav-link" href="register.html">REGISTER</a>
+            </li>
+
+            <!--  LOGIN -->
+            <li class="nav-item ">
+              <a class="nav-link" href="login.html">SIGN IN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- @author: Gazmend Shehu -->
+
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <div class="container">
+    <!-- ###################################################################################################-->
+
+    <section class="experiment">
+      <blockquote
+        id="blockquote"
+        style="display: none;border-bottom: 0;margin: 0 13%;text-align: center;border-radius: 6px;border-style: solid;border-color: rgb(214, 210, 210);"
+      ></blockquote>
+
+      <section class="section-divider">
+        <h6>Convert From</h6>
+        <select id="convert-from">
+          <option>en (English)</option>
+          <option>ar (العربية)</option>
+          <option>de (Deutsch)</option>
+          <option>fr (Français)</option>
+          <option>hi (हिंदी)</option>
+          <option>pt (Português)</option>
+          <option>ru (Русский)</option>
+          <option>es (Español)</option>
+          <option>tr (Türk)</option>
+          <option>nl (Nederlands)</option>
+          <option>it (Italiano)</option>
+          <option>pl (Polski)</option>
+          <option>ro (Român)</option>
+          <option>sv (Svensk)</option>
+          <option>vi (Việt)</option>
+          <option>th (ภาษาไทย)</option>
+          <option>zh-CN (中文简体)</option>
+          <option>zh-TW (中國傳統)</option>
+          <option>ko (한국의)</option>
+          <option>ja (日本人)</option>
+          <option>el (ελληνικά)</option>
+          <option>ts (தமிழ்)</option>
+          <option>hy (հայերեն)</option>
+          <option>bs (Bosanski)</option>
+          <option>ca (Català)</option>
+          <option>hr (Hrvatski)</option>
+          <option>dq (Dansk)</option>
+          <option>eo (Esperanto)</option>
+          <option>fi (Suomalainen)</option>
+          <option>ht (Haian kreyòl)</option>
+          <option>hu (Magyar)</option>
+          <option>is (Icelandic)</option>
+          <option>id (Indonesia)</option>
+          <option>la (Latinum)</option>
+          <option>lv (Latvijas)</option>
+          <option>mk (Македонски)</option>
+          <option>no (Norsk)</option>
+          <option>sr (Српски)</option>
+          <option>sk (Slovenský)</option>
+          <option>sw (Kiswahili)</option>
+          <option>cy (Cymraeg)</option>
+        </select>
+
+        <br /><br />
+        <textarea id="textarea-from"></textarea><br />
+        <button
+          id="btn-convert-text"
+          class="btn btn-primary"
+          style="font-size: 16px;"
+        >
+          Convert Your Text Input</button
+        ><br />
+        <button
+          id="btn-convert-voice"
+          class="btn btn-primary"
+          style="font-size: 16px;"
+        >
+          Speak & Convert Your Voice
+        </button>
+      </section>
+
+      <section class="section-divider">
+        <h6>Convert Into</h6>
+        <select id="convert-into">
+          <option>en (English)</option>
+          <option>ar (العربية)</option>
+          <option>de (Deutsch)</option>
+          <option>fr (Français)</option>
+          <option>hi (हिंदी)</option>
+          <option>pt (Português)</option>
+          <option>ru (Русский)</option>
+          <option>es (Español)</option>
+          <option>tr (Türk)</option>
+          <option>nl (Nederlands)</option>
+          <option>it (Italiano)</option>
+          <option>pl (Polski)</option>
+          <option>ro (Român)</option>
+          <option>sv (Svensk)</option>
+          <option>vi (Việt)</option>
+          <option>th (ภาษาไทย)</option>
+          <option>zh-CN (中文简体)</option>
+          <option>zh-TW (中國傳統)</option>
+          <option>ko (한국의)</option>
+          <option>ja (日本人)</option>
+          <option>el (ελληνικά)</option>
+          <option>ts (தமிழ்)</option>
+          <option>hy (հայերեն)</option>
+          <option>bs (Bosanski)</option>
+          <option>ca (Català)</option>
+          <option>hr (Hrvatski)</option>
+          <option>dq (Dansk)</option>
+          <option>eo (Esperanto)</option>
+          <option>fi (Suomalainen)</option>
+          <option>ht (Haian kreyòl)</option>
+          <option>hu (Magyar)</option>
+          <option>is (Icelandic)</option>
+          <option>id (Indonesia)</option>
+          <option>la (Latinum)</option>
+          <option>lv (Latvijas)</option>
+          <option>mk (Македонски)</option>
+          <option>no (Norsk)</option>
+          <option>sr (Српски)</option>
+          <option>sk (Slovenský)</option>
+          <option>sw (Kiswahili)</option>
+          <option>cy (Cymraeg)</option>
+        </select>
+
+        <br /><br />
+        <textarea
+          id="textarea-to"
+          disabled
+          style="background: #f9f9f9!important;border: 1px solid #f7f1f1;cursor: not-allowed;"
+          title="Output! ReadOnly!"
+        ></textarea>
+
+        <br />
+
+        <input
+          type="checkbox"
+          id="robot-voice"
+          title="A client-side robot that can speak your voice in target language!"
+          style="vertical-align: middle;"
+        />
+
+        <label
+          for="robot-voice"
+          style="vertical-align: middle;"
+          title="Use robot to play translated texts"
+          >Robot Speaker?</label
+        >
+      </section>
+    </section>
+
+    <script src="https://cdn.webrtc-experiment.com/Translator.js"></script>
+
+    <script>
+      var translator = new Translator();
+      var textArray = [];
+      function getOption(language) {
+        var option = document.createElement("option");
+        option.value = language.language;
+        if (language.name) {
+          option.innerHTML = language.name + " (" + language.language + ")";
+        } else {
+          option.innerHTML = language.language;
+        }
+
+        if (language.language == "en") {
+          option.selected = true;
+        }
+
+        return option;
+      }
+
+      var convertFrom = document.getElementById("convert-from");
+      var convertInto = document.getElementById("convert-into");
+
+      translator.getListOfLanguages(function(languages) {
+        if (!(languages instanceof Array)) return;
+
+        convertFrom.innerHTML = "";
+        convertInto.innerHTML = "";
+
+        languages.forEach(function(language) {
+          var option = getOption(language);
+          convertFrom.appendChild(option);
+
+          var option2 = getOption(language);
+          convertInto.appendChild(option2);
+        });
+
+        localStorageGetItem();
+
+        var blockquote = document.getElementById("blockquote");
+        blockquote.style.display = "block";
+        blockquote.innerHTML =
+          'You can translate your voice & texts among <strong class="highlight">' +
+          languages.length +
+          "</strong> languages.";
+      });
+
+      var textareaFrom = document.getElementById("textarea-from");
+      var textareaTo = document.getElementById("textarea-to");
+
+      function getLanguages() {
+        var from = document.getElementById("convert-from").value.split(" (")[0];
+        var to = document.getElementById("convert-into").value.split(" (")[0];
+
+        return {
+          from: from,
+          to: to
+        };
+      }
+
+      document.getElementById("btn-convert-voice").onclick = function() {
+        this.disabled = true;
+        this.innerHTML = "Start Speaking!";
+
+        var languages = getLanguages();
+
+        translator.voiceToText(function(text) {
+          textareaFrom.value = text;
+
+          document.getElementById("btn-convert-text").onclick(true);
+        }, languages.from);
+      };
+
+      document.getElementById("btn-convert-text").onclick = function(
+        speakAsWell
+      ) {
+        var languages = getLanguages();
+
+        textareaTo.value =
+          "Converting into >> " + document.getElementById("convert-into").value;
+
+        translator.translateLanguage(textareaFrom.value, {
+          from: languages.from,
+          to: languages.to,
+          callback: function(translatedText) {
+            textareaTo.value = translatedText;
+            localStorage.setItem("textarea-to", textareaTo.value);
+
+            if (speakAsWell !== true) return;
+            if (document.getElementById("robot-voice").checked) {
+              translator.speakTextUsingRobot(translatedText, {
+                workerPath:
+                  "https://cdn.webrtc-experiment.com/Robot-Speaker.js",
+                onWorkerFileDownloadStart: function() {
+                  console.log(
+                    "Downloading worker file. It is about 2MB in size."
+                  );
+                },
+                onWorkerFileDownloadEnd: function() {
+                  console.log("Worker file is downloaded.");
+                }
+              });
+            } else {
+              translator.speakTextUsingGoogleSpeaker({
+                textToSpeak: translatedText,
+                targetLanguage: languages.to,
+
+                // please use your own API key; if possible
+                api_key: "AIzaSyCgB5hmFY74WYB-EoWkhr9cAGr6TiTHrEE"
+              });
+            }
+          }
+        });
+      };
+
+      document.getElementById("convert-from").onchange = function() {
+        if (localStorage.getItem("Text-array")) {
+          localStorage.removeItem("Text-array");
+          textArray.push(this.value);
+          localStorage.setItem("Text-array", JSON.stringify(textArray));
+        } else {
+          textArray.push(this.value);
+          localStorage.setItem("Text-array", JSON.stringify(textArray));
+        }
+
+        localStorage.setItem("convert-from", this.value);
+      };
+
+      document.getElementById("convert-into").onchange = function() {
+        localStorage.setItem("convert-into", this.value);
+      };
+
+      textareaFrom.onchange = function() {
+        localStorage.setItem("textarea-from", this.value);
+      };
+
+      textareaTo.onchange = function() {
+        localStorage.setItem("textarea-to", this.value);
+      };
+
+      document.getElementById("robot-voice").onchange = function() {
+        localStorage.setItem("robot-checked", this.checked + "");
+      };
+
+      function localStorageGetItem() {
+        if (localStorage.getItem("convert-from")) {
+          document.getElementById("convert-from").value = localStorage.getItem(
+            "convert-from"
+          );
+        }
+
+        if (localStorage.getItem("convert-into")) {
+          document.getElementById("convert-into").value = localStorage.getItem(
+            "convert-into"
+          );
+        }
+
+        if (localStorage.getItem("textarea-from")) {
+          textareaFrom.value = localStorage.getItem("textarea-from");
+        }
+
+        if (localStorage.getItem("textarea-to")) {
+          textareaTo.value = localStorage.getItem("textarea-to");
+        }
+
+        if (localStorage.getItem("robot-checked")) {
+          document.getElementById("robot-voice").checked =
+            localStorage.getItem("robot-checked") === "true";
+        }
+      }
+
+      localStorageGetItem();
+    </script>
+
+    <!-- commits.js is useless for you! -->
+    <script>
+      window.useThisGithubPath = "muaz-khan/Translator";
+    </script>
+    <script src="https://cdn.webrtc-experiment.com/commits.js" async></script>
+
+    <!-- ##################################################################################################-->
+  </div>
+
+  <!--FOOTER-->
+
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(250, 250, 250);
+      color: gray;
+      text-align: center;
+    }
+  </style>
+
+  <div class="footer">
+    <p>Copyright 2019, Breaking the Language Barrier</p>
+  </div>
+</html>

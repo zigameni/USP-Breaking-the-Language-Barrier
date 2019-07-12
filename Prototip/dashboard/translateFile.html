@@ -1,0 +1,272 @@
+<!--  
+* @Project Breaking the Language Barrier
+* @author Gazmend Shehu 0664/2016
+*
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Translate File</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles -->
+    <link href="css/simple-sidebar.css" rel="stylesheet" />
+
+    <style></style>
+
+    <script>
+      //**************************************************************************************************************************
+
+      //**************************************************************************************************************************
+    </script>
+  </head>
+
+  <body style="background-color:#bfd8ff">
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading"><b><i>Breaking Borders</i> </b></div>
+        <div class="list-group list-group-flush">
+          <a
+            href="index.html"
+            class="list-group-item list-group-item-action bg-light"
+            >Dashboard</a
+          >
+          <a
+            href="history.html"
+            class="list-group-item list-group-item-action bg-light"
+            >History</a
+          >
+          <a
+            href="translateFile.html"
+            class="list-group-item list-group-item-action bg-light"
+            >Translate file</a
+          >
+          <a
+            href="../index.html"
+            class="list-group-item list-group-item-action bg-light"
+            >Logout</a
+          >
+        </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <!--  
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          
+
+        </div>
+      </nav>
+    -->
+        <div class="container-fluid">
+          <!-- ###################################################### -->
+          <br />
+          <br /><br />
+          <div class="container">
+            <table>
+              <tr>
+                <th><h6>Convert From</h6></th>
+                <th><h6>Convert To</h6></th>
+              </tr>
+              <tr>
+                <td>
+                  <select id="convert-from">
+                    <option>en (English)</option>
+                    <option>ar (العربية)</option>
+                    <option>de (Deutsch)</option>
+                    <option>fr (Français)</option>
+                    <option>hi (हिंदी)</option>
+                    <option>pt (Português)</option>
+                    <option>ru (Русский)</option>
+                    <option>es (Español)</option>
+                    <option>tr (Türk)</option>
+                    <option>nl (Nederlands)</option>
+                    <option>it (Italiano)</option>
+                    <option>pl (Polski)</option>
+                    <option>ro (Român)</option>
+                    <option>sv (Svensk)</option>
+                    <option>vi (Việt)</option>
+                    <option>th (ภาษาไทย)</option>
+                    <option>zh-CN (中文简体)</option>
+                    <option>zh-TW (中國傳統)</option>
+                    <option>ko (한국의)</option>
+                    <option>ja (日本人)</option>
+                    <option>el (ελληνικά)</option>
+                    <option>ts (தமிழ்)</option>
+                    <option>hy (հայերեն)</option>
+                    <option>bs (Bosanski)</option>
+                    <option>ca (Català)</option>
+                    <option>hr (Hrvatski)</option>
+                    <option>dq (Dansk)</option>
+                    <option>eo (Esperanto)</option>
+                    <option>fi (Suomalainen)</option>
+                    <option>ht (Haian kreyòl)</option>
+                    <option>hu (Magyar)</option>
+                    <option>is (Icelandic)</option>
+                    <option>id (Indonesia)</option>
+                    <option>la (Latinum)</option>
+                    <option>lv (Latvijas)</option>
+                    <option>mk (Македонски)</option>
+                    <option>no (Norsk)</option>
+                    <option>sr (Српски)</option>
+                    <option>sk (Slovenský)</option>
+                    <option>sw (Kiswahili)</option>
+                    <option>cy (Cymraeg)</option>
+                  </select>
+                </td>
+                <td>
+                  <select id="convert-from">
+                    <option>en (English)</option>
+                    <option>ar (العربية)</option>
+                    <option>de (Deutsch)</option>
+                    <option>fr (Français)</option>
+                    <option>hi (हिंदी)</option>
+                    <option>pt (Português)</option>
+                    <option>ru (Русский)</option>
+                    <option>es (Español)</option>
+                    <option>tr (Türk)</option>
+                    <option>nl (Nederlands)</option>
+                    <option>it (Italiano)</option>
+                    <option>pl (Polski)</option>
+                    <option>ro (Român)</option>
+                    <option>sv (Svensk)</option>
+                    <option>vi (Việt)</option>
+                    <option>th (ภาษาไทย)</option>
+                    <option>zh-CN (中文简体)</option>
+                    <option>zh-TW (中國傳統)</option>
+                    <option>ko (한국의)</option>
+                    <option>ja (日本人)</option>
+                    <option>el (ελληνικά)</option>
+                    <option>ts (தமிழ்)</option>
+                    <option>hy (հայերեն)</option>
+                    <option>bs (Bosanski)</option>
+                    <option>ca (Català)</option>
+                    <option>hr (Hrvatski)</option>
+                    <option>dq (Dansk)</option>
+                    <option>eo (Esperanto)</option>
+                    <option>fi (Suomalainen)</option>
+                    <option>ht (Haian kreyòl)</option>
+                    <option>hu (Magyar)</option>
+                    <option>is (Icelandic)</option>
+                    <option>id (Indonesia)</option>
+                    <option>la (Latinum)</option>
+                    <option>lv (Latvijas)</option>
+                    <option>mk (Македонски)</option>
+                    <option>no (Norsk)</option>
+                    <option>sr (Српски)</option>
+                    <option>sk (Slovenský)</option>
+                    <option>sw (Kiswahili)</option>
+                    <option>cy (Cymraeg)</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+
+            <br />
+            <input
+              type="file"
+              id="files"
+              class="btn-primary"
+              name="files[]"
+              multiple
+            /><br />
+            <output id="list"></output>
+          </div>
+
+          <script>
+            function handleFileSelect(evt) {
+              var files = evt.target.files; // FileList object
+
+              // files is a FileList of File objects. List some properties.
+              var output = [];
+              for (var i = 0, f; (f = files[i]); i++) {
+                output.push(
+                  "<li><strong>",
+                  escape(f.name),
+                  "</strong> (",
+                  f.type || "n/a",
+                  ") - ",
+                  f.size,
+                  " bytes, last modified: ",
+                  f.lastModifiedDate
+                    ? f.lastModifiedDate.toLocaleDateString()
+                    : "n/a",
+                  "</li>"
+                );
+              }
+              document.getElementById("list").innerHTML =
+                "<ul>" + output.join("") + "</ul>";
+            }
+
+            document
+              .getElementById("files")
+              .addEventListener("change", handleFileSelect, false);
+          </script>
+
+          <!-- ########################################################-->
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+      /*
+    var weStarting= "0";
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+
+     
+    });
+
+    */
+    </script>
+  </body>
+</html>

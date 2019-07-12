@@ -1,0 +1,546 @@
+<!--  
+* @Project Breaking the Language Barrier
+* @author Gazmend Shehu 0664/2016
+*
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles -->
+    <link href="css/simple-sidebar.css" rel="stylesheet" />
+
+    <style>
+      .section-divider {
+        display: inline-block;
+        width: 45%;
+        border-radius: 25px;
+        border: 1px solid gray;
+        padding: 3px 8px;
+        vertical-align: top;
+        height: 400px;
+      }
+
+      .section-divider * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .section-divider h2 {
+        font-size: 2em;
+        border-bottom: 2px outset black;
+        margin-bottom: 15px;
+        margin-left: -10px;
+        margin-right: -10px;
+        padding: 0 10px;
+        text-align: center;
+      }
+
+      .section-divider textarea {
+        width: 90%;
+        height: 250px;
+        resize: none;
+        font-size: 1.5em;
+        padding: 5px 10px;
+      }
+
+      select {
+        height: auto;
+        vertical-align: middle;
+        font-size: inherit;
+      }
+
+      button,
+      input[type="button"] {
+        padding: 0 5px !important;
+      }
+    </style>
+
+    <script>
+      //**************************************************************************************************************************
+      function searchHistory(searchParam) {
+        //const maxHistoryLength = 3;
+        const history = JSON.parse(
+          localStorage.getItem("searchHistory") || "[]"
+        );
+        //const isHistoryMaxed = history.length === maxHistoryLength;
+        //const workingHistory = isHistoryMaxed ? history.slice(1) : history;
+        const workingHistory = history;
+        const updatedHistory = workingHistory.concat(searchParam);
+
+        localStorage.setItem("searchHistory", JSON.stringify(updatedHistory));
+      }
+
+      function updateSearchHistoryUi() {
+        const history = JSON.parse(
+          localStorage.getItem("searchHistory") || "[]"
+        );
+
+        // Create the list element:
+        var list = document.createElement("ul");
+
+        for (var i = 0; i < history.length; i++) {
+          // Create the list item:
+          var item = document.createElement("li");
+
+          // Set its contents:
+          item.appendChild(document.createTextNode(history[i]));
+
+          // Add it to the list:
+          list.appendChild(item);
+        }
+        document.getElementById("history").appendChild(list);
+      }
+
+      function clearSearchHistoryUi() {
+        localStorage.removeItem("searchHistory");
+      }
+
+      //**************************************************************************************************************************
+    </script>
+  </head>
+
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">
+          <b><i>Breaking Borders</i> </b>
+        </div>
+        <div class="list-group list-group-flush">
+          <a
+            href="index.html"
+            class="list-group-item list-group-item-action bg-light"
+            >Dashboard</a
+          >
+          <a
+            href="history.html"
+            class="list-group-item list-group-item-action bg-light"
+            >History</a
+          >
+          <a
+            href="translateFile.html"
+            class="list-group-item list-group-item-action bg-light"
+            >Translate file</a
+          >
+          <a
+            href="../index.html"
+            class="list-group-item list-group-item-action bg-light"
+            >Logout</a
+          >
+        </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <!--  
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          
+
+        </div>
+      </nav>
+    -->
+        <div class="container-fluid">
+          <!-- ###################################################### -->
+          <br />
+          <br />
+          <br />
+          <br />
+          <div class="container">
+            <section class="experiment">
+              <blockquote
+                id="blockquote"
+                style="display: none;border-bottom: 0;margin: 0 13%;text-align: center;border-radius: 6px;border-style: solid;border-color: rgb(214, 210, 210);"
+              ></blockquote>
+
+              <section class="section-divider">
+                <h6>Convert From</h6>
+                <select id="convert-from">
+                  <option>en (English)</option>
+                  <option>ar (العربية)</option>
+                  <option>de (Deutsch)</option>
+                  <option>fr (Français)</option>
+                  <option>hi (हिंदी)</option>
+                  <option>pt (Português)</option>
+                  <option>ru (Русский)</option>
+                  <option>es (Español)</option>
+                  <option>tr (Türk)</option>
+                  <option>nl (Nederlands)</option>
+                  <option>it (Italiano)</option>
+                  <option>pl (Polski)</option>
+                  <option>ro (Român)</option>
+                  <option>sv (Svensk)</option>
+                  <option>vi (Việt)</option>
+                  <option>th (ภาษาไทย)</option>
+                  <option>zh-CN (中文简体)</option>
+                  <option>zh-TW (中國傳統)</option>
+                  <option>ko (한국의)</option>
+                  <option>ja (日本人)</option>
+                  <option>el (ελληνικά)</option>
+                  <option>ts (தமிழ்)</option>
+                  <option>hy (հայերեն)</option>
+                  <option>bs (Bosanski)</option>
+                  <option>ca (Català)</option>
+                  <option>hr (Hrvatski)</option>
+                  <option>dq (Dansk)</option>
+                  <option>eo (Esperanto)</option>
+                  <option>fi (Suomalainen)</option>
+                  <option>ht (Haian kreyòl)</option>
+                  <option>hu (Magyar)</option>
+                  <option>is (Icelandic)</option>
+                  <option>id (Indonesia)</option>
+                  <option>la (Latinum)</option>
+                  <option>lv (Latvijas)</option>
+                  <option>mk (Македонски)</option>
+                  <option>no (Norsk)</option>
+                  <option>sr (Српски)</option>
+                  <option>sk (Slovenský)</option>
+                  <option>sw (Kiswahili)</option>
+                  <option>cy (Cymraeg)</option>
+                </select>
+
+                <br /><br />
+                <textarea id="textarea-from"></textarea><br />
+                <button
+                  id="btn-convert-text"
+                  style="font-size: 16px;"
+                  class="btn btn-success"
+                >
+                  Convert Your Text Input</button
+                ><br />
+                <button
+                  id="btn-convert-voice"
+                  style="font-size: 16px;"
+                  class="btn btn-success"
+                >
+                  Speak & Convert Your Voice
+                </button>
+              </section>
+
+              <section class="section-divider">
+                <h6>Convert Into</h6>
+                <select id="convert-into">
+                  <option>en (English)</option>
+                  <option>ar (العربية)</option>
+                  <option>de (Deutsch)</option>
+                  <option>fr (Français)</option>
+                  <option>hi (हिंदी)</option>
+                  <option>pt (Português)</option>
+                  <option>ru (Русский)</option>
+                  <option>es (Español)</option>
+                  <option>tr (Türk)</option>
+                  <option>nl (Nederlands)</option>
+                  <option>it (Italiano)</option>
+                  <option>pl (Polski)</option>
+                  <option>ro (Român)</option>
+                  <option>sv (Svensk)</option>
+                  <option>vi (Việt)</option>
+                  <option>th (ภาษาไทย)</option>
+                  <option>zh-CN (中文简体)</option>
+                  <option>zh-TW (中國傳統)</option>
+                  <option>ko (한국의)</option>
+                  <option>ja (日本人)</option>
+                  <option>el (ελληνικά)</option>
+                  <option>ts (தமிழ்)</option>
+                  <option>hy (հայերեն)</option>
+                  <option>bs (Bosanski)</option>
+                  <option>ca (Català)</option>
+                  <option>hr (Hrvatski)</option>
+                  <option>dq (Dansk)</option>
+                  <option>eo (Esperanto)</option>
+                  <option>fi (Suomalainen)</option>
+                  <option>ht (Haian kreyòl)</option>
+                  <option>hu (Magyar)</option>
+                  <option>is (Icelandic)</option>
+                  <option>id (Indonesia)</option>
+                  <option>la (Latinum)</option>
+                  <option>lv (Latvijas)</option>
+                  <option>mk (Македонски)</option>
+                  <option>no (Norsk)</option>
+                  <option>sr (Српски)</option>
+                  <option>sk (Slovenský)</option>
+                  <option>sw (Kiswahili)</option>
+                  <option>cy (Cymraeg)</option>
+                </select>
+
+                <br /><br />
+                <textarea
+                  id="textarea-to"
+                  disabled
+                  style="background: #f9f9f9!important;border: 1px solid #f7f1f1;cursor: not-allowed;"
+                  title="Output! ReadOnly!"
+                ></textarea>
+
+                <br />
+
+                <input
+                  type="checkbox"
+                  id="robot-voice"
+                  title="A client-side robot that can speak your voice in target language!"
+                  style="vertical-align: middle;"
+                />
+
+                <label
+                  for="robot-voice"
+                  style="vertical-align: middle;"
+                  title="Use robot to play translated texts"
+                  >Robot Speaker?</label
+                >
+              </section>
+            </section>
+
+            <script src="https://cdn.webrtc-experiment.com/Translator.js"></script>
+
+            <script>
+              var translator = new Translator();
+
+              function getOption(language) {
+                var option = document.createElement("option");
+                option.value = language.language;
+                if (language.name) {
+                  option.innerHTML =
+                    language.name + " (" + language.language + ")";
+                } else {
+                  option.innerHTML = language.language;
+                }
+
+                if (language.language == "en") {
+                  option.selected = true;
+                }
+
+                return option;
+              }
+
+              var convertFrom = document.getElementById("convert-from");
+              var convertInto = document.getElementById("convert-into");
+
+              translator.getListOfLanguages(function(languages) {
+                if (!(languages instanceof Array)) return;
+
+                convertFrom.innerHTML = "";
+                convertInto.innerHTML = "";
+
+                languages.forEach(function(language) {
+                  var option = getOption(language);
+                  convertFrom.appendChild(option);
+
+                  var option2 = getOption(language);
+                  convertInto.appendChild(option2);
+                });
+
+                localStorageGetItem();
+
+                var blockquote = document.getElementById("blockquote");
+                blockquote.style.display = "block";
+                blockquote.innerHTML =
+                  'You can translate your voice & texts among <strong class="highlight">' +
+                  languages.length +
+                  "</strong> languages.";
+              });
+
+              var textareaFrom = document.getElementById("textarea-from");
+              var textareaTo = document.getElementById("textarea-to");
+
+              function getLanguages() {
+                var from = document
+                  .getElementById("convert-from")
+                  .value.split(" (")[0];
+                var to = document
+                  .getElementById("convert-into")
+                  .value.split(" (")[0];
+
+                return {
+                  from: from,
+                  to: to
+                };
+              }
+
+              document.getElementById(
+                "btn-convert-voice"
+              ).onclick = function() {
+                this.disabled = true;
+                this.innerHTML = "Start Speaking!";
+
+                var languages = getLanguages();
+
+                translator.voiceToText(function(text) {
+                  textareaFrom.value = text;
+
+                  document.getElementById("btn-convert-text").onclick(true);
+                }, languages.from);
+              };
+
+              document.getElementById("btn-convert-text").onclick = function(
+                speakAsWell
+              ) {
+                var languages = getLanguages();
+
+                textareaTo.value =
+                  "Converting into >> " +
+                  document.getElementById("convert-into").value;
+
+                translator.translateLanguage(textareaFrom.value, {
+                  from: languages.from,
+                  to: languages.to,
+                  callback: function(translatedText) {
+                    textareaTo.value = translatedText;
+                    localStorage.setItem("textarea-to", textareaTo.value);
+
+                    if (speakAsWell !== true) return;
+                    if (document.getElementById("robot-voice").checked) {
+                      translator.speakTextUsingRobot(translatedText, {
+                        workerPath:
+                          "https://cdn.webrtc-experiment.com/Robot-Speaker.js",
+                        onWorkerFileDownloadStart: function() {
+                          console.log(
+                            "Downloading worker file. It is about 2MB in size."
+                          );
+                        },
+                        onWorkerFileDownloadEnd: function() {
+                          console.log("Worker file is downloaded.");
+                        }
+                      });
+                    } else {
+                      translator.speakTextUsingGoogleSpeaker({
+                        textToSpeak: translatedText,
+                        targetLanguage: languages.to,
+
+                        // please use your own API key; if possible
+                        api_key: "AIzaSyCgB5hmFY74WYB-EoWkhr9cAGr6TiTHrEE"
+                      });
+                    }
+                  }
+                });
+              };
+
+              document.getElementById("convert-from").onchange = function() {
+                localStorage.setItem("convert-from", this.value);
+              };
+
+              document.getElementById("convert-into").onchange = function() {
+                localStorage.setItem("convert-into", this.value);
+              };
+
+              textareaFrom.onchange = function() {
+                //adding data to the array
+                searchHistory(this.value);
+
+                localStorage.setItem("textarea-from", this.value);
+              };
+
+              textareaTo.onchange = function() {
+                localStorage.setItem("textarea-to", this.value);
+              };
+
+              document.getElementById("robot-voice").onchange = function() {
+                localStorage.setItem("robot-checked", this.checked + "");
+              };
+
+              function localStorageGetItem() {
+                if (localStorage.getItem("convert-from")) {
+                  document.getElementById(
+                    "convert-from"
+                  ).value = localStorage.getItem("convert-from");
+                }
+
+                if (localStorage.getItem("convert-into")) {
+                  document.getElementById(
+                    "convert-into"
+                  ).value = localStorage.getItem("convert-into");
+                }
+
+                if (localStorage.getItem("textarea-from")) {
+                  textareaFrom.value = localStorage.getItem("textarea-from");
+                }
+
+                if (localStorage.getItem("textarea-to")) {
+                  textareaTo.value = localStorage.getItem("textarea-to");
+                }
+
+                if (localStorage.getItem("robot-checked")) {
+                  document.getElementById("robot-voice").checked =
+                    localStorage.getItem("robot-checked") === "true";
+                }
+              }
+
+              localStorageGetItem();
+            </script>
+
+            <!-- commits.js is useless for you! -->
+            <script>
+              window.useThisGithubPath = "muaz-khan/Translator";
+            </script>
+            <script
+              src="https://cdn.webrtc-experiment.com/commits.js"
+              async
+            ></script>
+          </div>
+
+          <!-- ########################################################-->
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+      /*
+    var weStarting= "0";
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+
+     
+    });
+
+    */
+    </script>
+  </body>
+</html>
